@@ -3,7 +3,7 @@ import React from 'react';
 import Header from './Header.js';
 import Main from './Main.js';
 import Footer from './Footer.js';
-import HornedBeast from './HornedBeast.js';
+// import HornedBeast from './HornedBeast.js';
 
 // class components
 class App extends React.Component {
@@ -11,7 +11,6 @@ class App extends React.Component {
     return (
       <>
         <Header />
-        <HornedBeast />
         <Main />
         <Footer />
       </>
