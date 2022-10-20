@@ -1,25 +1,24 @@
 import React from "react";
 import HornedBeast from "./HornedBeast";
-import data from './data.json';
+// import data from './data.json';
 import './Main.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
 class Main extends React.Component {
   render() {
-    let HornedAnimals = [];
-
-    data.forEach((animal, index) => {
-      HornedAnimals.push(
-        <HornedBeast
-          image_url={animal.image_url}
-          title={animal.title}
-          description={animal.description}
-          key={index}
-        />
-      )
+    let HornedAnimals = this.props.data.map((animal, index) => {
+      return <HornedBeast
+        // HornedAnimals.push(
+        image_url={animal.image_url}
+        title={animal.title}
+        description={animal.description}
+        key={index}
+        handleOpenModal={()=>this.props.handleOpenModal(animal)}
+      />
+      // )
     });
-    console.log('hornedAnimals', HornedAnimals)
+    // console.log('hornedAnimals', HornedAnimals)
     return (
       <>
         <main>
